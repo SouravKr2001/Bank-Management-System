@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF1B1B1B"
+    android:orientation="vertical"
+
+    tools:context=".UI.HomeScreen">
+
+    <RelativeLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/graph2"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bank_logo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/bank_logo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/first">
+
+        <TextView
+            android:id="@+id/bank_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/goblin_one"
+            android:gravity="center"
+            android:text="@string/banking_system_app"
+            android:textColor="#FFC107"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/all_users"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/bank_title"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginRight="70dp"
+            android:backgroundTint="#313132"
+            android:fontFamily="@font/copse"
+            android:onClick="showAllUsers"
+            android:text="@string/all_users"
+            android:textColor="#ffff"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/all_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/all_users"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:backgroundTint="#313132"
+            android:fontFamily="@font/copse"
+            android:onClick="showAllTransactions"
+            android:text="@string/all_transactions"
+            android:textColor="#ffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>
